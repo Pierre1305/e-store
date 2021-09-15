@@ -10,19 +10,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body onload="GetStationData(1002)">
+<body>
 
     <!-- navigation -->
     <header>
         <img class="logo" src="img/mainlogo.png" alt="logo">
-        <img class="ani_clothing"src="img/clothing_vid.gif" alt="products_video">
+        <img class="ani_clothing" src="img/clothing_vid.gif" alt="products_video">
         <div class="logo_text">
         </div>
         <nav>
             <ul id="navigation_menu" class="nav_links">
-                <li><a href="#">News</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Nyheter</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Kontakt</a></li>
                 <!-- <li><a href="#">Lorem</a></li> -->
             </ul>
         </nav>
@@ -32,48 +32,37 @@
         <img class="icon" src="img/profile.png" alt="profile image">
     </header>
     <hr class="header_line">
-<main>
+
+
     <div class="clothing_div">
-        <img class="search_icon" src="img/hamburger.png" alt="hamburger">
+        <img class="hamburger_icon" src="img/hamburger.png" alt="hamburger">
         <ul id="clothing_menu" class="nav_clothing">
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Kids</a></li>
-            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Kvinnor</a></li>
+            <li><a href="#">Män</a></li>
+            <li><a href="#">Barn</a></li>
+            <li><a href="#">Elektronik</a></li>
             <input type="text" name="search" placeholder="Search product...">
             <img class="search_icon" src="img/search.png" alt="search logo">
             <!-- <button class="button_search"></button> -->
         </ul>
     </div>
+
     <hr class="header_line">
-    <div id="main_container" class="main_container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
-        
-
-    </div>
-</main>
-
-
-    <!-- content -->
+    
     <main>
-
+        <div class="category_grid">
+            <figure class="gallery__item gallery__item--1">
+                <img src="img/category_women.jpg" class="category_item" alt="Image 1">
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+                <img src="img/category_men.jpg" class="category_item" alt="Image 2">
+            </figure>
+            <figure class="gallery__item gallery__item--3">
+                <img src="img/category_kids.jpg" class="category_item" alt="Image 3">
+            </figure>
+        </div>
+        </div>
     </main>
-
-    <div id="departures" class="grid-container">
-
-    </div>
-
-    <!-- footer -->
-    <footer>
-    </footer>
 
     <script src="script.js"></script>
 </body>
