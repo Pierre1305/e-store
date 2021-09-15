@@ -1,33 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>e-Store</title>
-    <link rel="stylesheet" href="sheet.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="navbar">
-        <div class="logo">
-          <img src="image/logo.png" alt="logo" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-Store</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="GetStationData(1002)">
+
+    <!-- navigation -->
+    <header>
+        <img class="logo" src="image/mainlogo.png" alt="logo">
+        <img class="ani_clothing"src="img/clothing_vid.gif" alt="products_video">
+        <div class="logo_text">
         </div>
         <nav>
-          <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Products</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Admin</a></li>
-          </ul>
+            <ul id="navigation_menu" class="nav_links">
+                <li><a href="#">News</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+                <!-- <li><a href="#">Lorem</a></li> -->
+            </ul>
         </nav>
-        <img src="image/login.png" alt="login" class="icon" />
-        <img src="image/favorite.png" alt="favorite" class="icon" />
-        <img src="image/cart.png" alt="shopping-cart" class="icon" />
-      </div>
+        <a class="cta" href="#"><button>Support</button></a>
+        <img class="icon" src="img/cart.png" alt="cart image">
+        <img class="icon" src="img/heart.png" alt="like image">
+        <img class="icon" src="img/profile.png" alt="profile image">
     </header>
-    <main></main>
-    <footer></footer>
-  </body>
+    <hr class="header_line">
+<main>
+    <div class="clothing_div">
+        <img class="search_icon" src="img/hamburger.png" alt="hamburger">
+        <ul id="clothing_menu" class="nav_clothing">
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Electronics</a></li>
+            <input type="text" name="search" placeholder="Search product...">
+            <img class="search_icon" src="img/search.png" alt="search logo">
+            <!-- <button class="button_search"></button> -->
+        </ul>
+    </div>
+    <hr class="header_line">
+    <div id="main_container" class="main_container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, expedita?</p>
+        
+
+    </div>
+</main>
+
+
+    <!-- content -->
+    <main>
+
+    </main>
+
+    <div id="departures" class="grid-container">
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
 </html>
