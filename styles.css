@@ -130,6 +130,8 @@ ________________________________________________ */
     object-fit: cover;
 }
 .clothing_div {
+    display: flex;
+    flex-wrap: wrap;
     background-color: rgba(255, 166, 0, 0.822);
     margin: 0.5%;
     padding: 1%;
@@ -159,6 +161,7 @@ ________________________________________________ */
     font-weight: 700;
     color: black;
     text-decoration: none;
+    float: right;
 
     height: 2.2em;
     width: 20em;
@@ -204,3 +207,51 @@ button:hover {
     margin-right: auto;
     margin-left: auto;
 }
+/*______________________________________________
+                SIDE NAVIGATION
+________________________________________________ */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 242px;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav li {
+    color: #818181;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
+  }

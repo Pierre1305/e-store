@@ -35,7 +35,20 @@
 
 
     <div class="clothing_div">
-        <img class="hamburger_icon" src="img/hamburger.png" alt="hamburger">
+    </ul>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul><a href="#">Women</a>
+            <li>t-shirt</li>
+            <li>shirt</li>
+
+        </ul>
+
+        <a href="#">Men</a>
+        <a href="#">Kids</a>
+        <a href="#">Electronics</a>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
         <ul id="clothing_menu" class="nav_clothing">
             <li><a href="#">Kvinnor</a></li>
             <li><a href="#">Män</a></li>
@@ -43,12 +56,12 @@
             <li><a href="#">Elektronik</a></li>
             <input type="text" name="search" placeholder="Search product...">
             <img class="search_icon" src="img/search.png" alt="search logo">
-            <!-- <button class="button_search"></button> -->
         </ul>
     </div>
 
+
     <hr class="header_line">
-    
+
     <main>
         <div class="category_grid">
             <figure class="gallery__item gallery__item--1">
