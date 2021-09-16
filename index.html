@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>E-Store</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
 <body>
     <!-- navigation -->
     <header>
@@ -24,78 +19,121 @@
                 <li><a href="#">Kontakt</a></li>
             </ul>
         </nav>
+      
         <a class="cta" href="#"><button>Support</button></a>
         <img class="icon" src="img/cart.png" alt="cart image">
         <img class="icon" src="img/heart.png" alt="like image">
         <img class="icon" src="img/profile.png" alt="profile image">
+      
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
     </header>
 
-    <hr class="header_line">
+    <hr class="header_line" />
 
     <div class="clothing_div">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <ul>
+          <a href="#">Kvinnor</a>
+          <li><a href="#">Tröjor</a></li>
+          <li><a href="#">Byxor </a></li>
+          <li><a href="#">Skjortor </a></li>
+          <li><a href="#">Jackor </a></li>
+          <li><a href="#">Skor </a></li>
         </ul>
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <ul><a href="#">Kvinnor</a>
-                <li><a href="#">Tröjor</a></li>
-                <li><a href="#">Byxor </a></li>
-                <li><a href="#">Skjortor </a></li>
-                <li><a href="#">Jackor </a></li>
-                <li><a href="#">Skor </a></li>
-            </ul>
-            <ul><a href="#">Män</a>
-                <li><a href="#">Tröjor</a></li>
-                <li><a href="#">Byxor </a></li>
-                <li><a href="#">Skjortor </a></li>
-                <li><a href="#">Jackor </a></li>
-                <li><a href="#">Skor </a></li>
-            </ul>
-            <ul><a href="#">Barn</a>
-                <li><a href="#">Tröjor</a></li>
-                <li><a href="#">Byxor </a></li>
-                <li><a href="#">Skjortor </a></li>
-                <li><a href="#">Jackor </a></li>
-                <li><a href="#">Skor </a></li>
-            </ul>
-            <ul><a href="#">Elektronik</a>
-                <li><a href="#">Tröjor</a></li>
-                <li><a href="#">Byxor </a></li>
-                <li><a href="#">Skjortor </a></li>
-                <li><a href="#">Jackor </a></li>
-                <li><a href="#">Skor </a></li>
-            </ul>
-        </div>
-
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-
-        <ul id="clothing_menu" class="nav_clothing">
-            <li><a href="#">Kvinnor</a></li>
-            <li><a href="#">Män</a></li>
-            <li><a href="#">Barn</a></li>
-            <li><a href="#">Elektronik</a></li>
-
+        <ul>
+          <a href="#">Män</a>
+          <li><a href="#">Tröjor</a></li>
+          <li><a href="#">Byxor </a></li>
+          <li><a href="#">Skjortor </a></li>
+          <li><a href="#">Jackor </a></li>
+          <li><a href="#">Skor </a></li>
         </ul>
-        <div class="search-bar">
+        <ul>
+          <a href="#">Barn</a>
+          <li><a href="#">Tröjor</a></li>
+          <li><a href="#">Byxor </a></li>
+          <li><a href="#">Skjortor </a></li>
+          <li><a href="#">Jackor </a></li>
+          <li><a href="#">Skor </a></li>
+        </ul>
+        <ul>
+          <a href="#">Elektronik</a>
+          <li><a href="#">Tröjor</a></li>
+          <li><a href="#">Byxor </a></li>
+          <li><a href="#">Skjortor </a></li>
+          <li><a href="#">Jackor </a></li>
+          <li><a href="#">Skor </a></li>
+        </ul>
+      </div>
 
-            <input type="text" name="search" placeholder="Search product...">
-            <img class="search_icon" src="img/search.png" alt="search logo">
+      <span style="font-size: 30px" onclick="openNav()">&#9776; Menu</span>
 
+      <div class="navbar">
+        <div class="subnav">
+          <button class="subnavbtn">Kläder</button>
+          <div class="subnav-content">
+            <a href="#">Kvinnor</a>
+            <a href="#">Män</a>
+            <a href="#">Barn</a>
+          </div>
         </div>
+        <div class="subnav">
+          <button class="subnavbtn">Skor</button>
+          <div class="subnav-content">
+            <a href="#">Kvinnor</a>
+            <a href="#">Män</a>
+            <a href="#">Barn</a>
+          </div>
+        </div>
+        <div class="subnav">
+          <button class="subnavbtn">Smink</button>
+          <div class="subnav-content">
+            <a href="#">Kvinnor</a>
+            <a href="#">Män</a>
+            <a href="#">Barn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- <ul id="clothing_menu" class="nav_clothing">
+        <li><a href="#">Kvinnor</a></li>
+        <li><a href="#">Män</a></li>
+        <li><a href="#">Barn</a></li>
+        <li><a href="#">Elektronik</a></li>
+      </ul>-->
+      <div class="search-bar">
+        <input type="text" name="search" placeholder="Search product..." />
+        <img class="search_icon" src="img/search.png" alt="search logo" />
+      </div>
     </div>
-    <hr class="header_line">
+    <hr class="header_line" />
 
     <main>
-        <div class="category_grid">
-            <figure class="gallery__item gallery__item--1">
-                <img src="img/category_women.jpg" class="category_item" alt="Image 1">
-            </figure>
-            <figure class="gallery__item gallery__item--2">
-                <img src="img/category_men.jpg" class="category_item" alt="Image 2">
-            </figure>
-            <figure class="gallery__item gallery__item--3">
-                <img src="img/category_kids.jpg" class="category_item" alt="Image 3">
-            </figure>
-        </div>
+      <div class="category_grid">
+        <figure class="gallery__item gallery__item--1">
+          <img
+            src="img/category_women.jpg"
+            class="category_item"
+            alt="Image 1"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+          <img src="img/category_men.jpg" class="category_item" alt="Image 2" />
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+          <img
+            src="img/category_kids.jpg"
+            class="category_item"
+            alt="Image 3"
+          />
+        </figure>
+      </div>
     </main>
     <div id="slider_container">
         <div id="slider">
@@ -108,10 +146,7 @@
             </figure>
         </div>
     </div>
-    <footer>
-
-    </footer>
+    <footer></footer>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
