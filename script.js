@@ -8,7 +8,6 @@ async function GetApiData() {
 // SIDE NAVIGATION
 
 function openNav() {
-gallery_carousel
     document.getElementById('mySidenav').style.width = '175px';
     document.getElementById('main').style.marginLeft = '250px';
 }
