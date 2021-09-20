@@ -1,15 +1,6 @@
 // ______________________________________________________________//
 // API / JSON
 // ______________________________________________________________//
-
-/* async function getShopData(apiUrl) {
-    axios.get(apiUrl)
-        .then(response => {
-            app.posts = response.data;
-            console.log("Hämtar återigen!")
-        })
-} */
-
 const app = new Vue({
     el: '#app',
     async created() { 
@@ -20,41 +11,49 @@ const app = new Vue({
         products: [],
         cart: [],
     },
-    methods: {
+    methods: {    
         createProduct: function () {
             this.products.push({ 
                 // title: this.prodName, price: '4.99' 
             })
-        },       
+        },   
+        filterProduct: function(product, filter) {
+            if(product.category.startsWith(filter)){
+                return product;
+            }
+            else { return; }
+        }  
     }
 });
 
-const categoryView = Vue.component('category', {
+const homePage = Vue.component('homepage', {
+    data: function () {
+
+    },
+
+    template: '<div><div class="category_grid">'
+            + '<figure class="gallery__item gallery__item--1">'
+            + '<img src="img/category_women.jpg" class="category_item" alt="womens clothing"/>'
+            + '</figure>'
+            + '<figure class="gallery__item gallery__item--2">'
+            + '<img src="img/category_men.jpg" class="category_item" alt="mens clothes" />'
+            + '</figure>'
+            + '<figure class="gallery__item gallery__item--3">'
+            + '<img src="img/category_kids.jpg" class="category_item" alt="kids clothes" />'
+            + '</figure>'
+            + '</div></div>'
+
+})
+const womenClothing = Vue.component('womenclothing', {
+
         data: function () {
             return {
-                category: category
+                filtered: filterProduct("women's clothing")
             }
         },
+
     template: ''
 });
-
-const appComponent = Vue.component('info', {
-    data: function () {
-        return {
-            theShop: app.posts
-        }
-    },
-    template: '<div><ol>'
-        + '<li v-for="product in theShop">{{product.title}} ${{product.price}}</li></ol>'
-        + '</div>'
-});
-/* async function GetApiData() {
-    await fetch('https://fakestoreapi.com/products')
-            .then(res => res.json())
-            .then(json => console.log(json));
-} */
-
-
 // ______________________________________________________________//
 // PRODUCTS
 // ______________________________________________________________//

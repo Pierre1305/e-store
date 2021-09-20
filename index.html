@@ -10,7 +10,6 @@
   <title>E-Store</title>
 
 <body>
-  <div id="app"></div>
   <!-- navigation -->
   <header>
     <img class="logo" src="img/mainlogo.png" alt="logo">
@@ -110,8 +109,8 @@
   </div>
 
   </div>
-
-  <main id="app">
+  
+  <main>
     <div class="category_grid">
       <figure class="gallery__item gallery__item--1">
         <img src="img/category_women.jpg" class="category_item" alt="womens clothes" />
@@ -136,7 +135,14 @@
       </figure>
     </div>
   </div>
-  <footer class= "footer-container">
+
+  <div id="app">
+    <ul v-show="true" v-for="product in products">
+      <li v-if="filterProduct(product, 'men')">{{product}}</li>
+    </ul>
+  </div>
+
+  <footer class="footer-container">
     <div class="footer">
       <div class="footer-heading footer-1">
         <h3>Om Oss</h3>
@@ -151,7 +157,7 @@
         <a href="#">Köp presentkort</a>
         <a href="#">Frågor om presentkort</a>
         <a href="#">Presentkort för företag</a>
-        </div>
+      </div>
       <div class="footer-heading footer-3">
         <h3>Social Media</h3>
         <a href="#">Instagram</a>
