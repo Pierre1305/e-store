@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
+.main {
+  width: 100%;
+  height: 100px;
+}
 /*______________________________________________
                     ALL
 ________________________________________________ */
@@ -39,9 +44,9 @@ header {
     background-color: white;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
+    height: 15vh;
     color: black;
     text-decoration: none;
-
 }
 /*______________________________________________
                     LOGO
@@ -130,13 +135,12 @@ ________________________________________________ */
 }
 .logo_text {
   cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Parisienne', sans-serif;
   font-weight: 500;
-  font-size: 1.7em;
-  margin-right: 1em;
+  font-size: 2.2em;
+  margin-right: 6em;
   color: black;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: -3px;
   transition: all 0.3s ease 0s;
   width: 10em;
 }
@@ -162,106 +166,103 @@ ________________________________________________ */
   height: 100%;
   object-fit: cover;
 }
+.category_item:hover {
+  opacity: 70%;
+}
+/*______________________________________________
+                 SUBNAV AND MENU
+________________________________________________ */
 .clothing_div {
   display: grid;
   grid-template-columns: 12% 68% 20%;
-  background-color: rgba(255, 166, 0, 0.822);
-  margin: 0.5%;
-  padding: 1%;
+  background-color: rgba(0, 0, 0, 0.829);
+  color: white;
+  margin: 0.5%; 
+  padding: 0.5%;
   border-radius: 0.1em;
 }
-
 .navbar {
   overflow: hidden;
   display: flex;
   justify-content: center;
 }
-
 .navbar a {
   float: left;
-  font-size: 16px;
+  font-size: 1em;
   color: black;
-  padding: 14px 16px;
+  padding: 1em;
   text-decoration: none;
 }
-
 .subnav {
   float: left;
   overflow: hidden;
 }
-
 .subnav .subnavbtn {
-  font-size: 16px;
+  font-size: 1em;
   border: none;
   outline: none;
-  color: black;
+  color: white;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   margin: 0;
   text-align: left;
+  transition: all 0.3s ease 0s;
 }
-
+.subnavbtn:hover {
+  text-decoration: none;
+  color: #09738d;
+}
 .subnav-content {
   display: none;
   position: absolute;
 
-  background-color: gray;
+  background-color: black;
   z-index: 1;
 }
-
 .subnav-content a {
   float: left;
   color: white;
   text-decoration: none;
 }
-
 .subnav-content a:hover {
   background-color: #eee;
   color: black;
 }
-
 .subnav:hover .subnav-content {
   display: block;
 }
+
 /*______________________________________________
-                NAVIGATION CLOTHING
+                SEARCHBAR
 ________________________________________________ */
-.nav_clothing {
-  list-style: none;
-  margin-left: 20%;
-  margin-right: 5%;
-}
-.nav_clothing li {
+.searchbar_div {
   display: inline-block;
-  padding: 0px 1.3em;
+  margin-top: 0.5%;
+  width: 100%;
+  height: 1vh;
 }
-.nav_clothing li a {
-  transition: all 0.3s ease 0s;
-  line-height: 3em;
-}
-.nav_clothing li a:hover {
-  color: white;
-}
-.nav_clothing input[type='text'] {
+.searchbar_div input[type='text'] {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.8em;
-  font-weight: 700;
+  font-size: 2vh;
+  font-weight: 300;
   color: black;
   text-decoration: none;
-  float: right;
-
-  height: 2.2em;
-  width: 20em;
+  height: 4vh;
+  width: 50vh;
   border: solid;
-  border-radius: 0.5em;
-  margin-left: 30%;
+  float: right;
+  margin-right: 0.5%;
+}
+.searchbar_div input[type='text']:hover {
+  opacity: 70%;
+}
+.searchbar_div img {
+  margin-right: 3%;
+  float: right; 
 }
 
-.search-bar {
-  float: right;
-  line-height: 3em;
-}
 /*______________________________________________
                 NAVIGATION MAIN
 ________________________________________________ */
@@ -269,6 +270,7 @@ ________________________________________________ */
   list-style: none;
   font-size: 2.3vh;
   overflow: hidden;
+  cursor: pointer;
 }
 .nav_links li {
   display: inline-block;
@@ -309,7 +311,7 @@ ________________________________________________ */
   width: 0;
   position: absolute;
   z-index: 1;
-  top: 188px;
+  top: 12em;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
@@ -333,11 +335,9 @@ ________________________________________________ */
   display: block;
   font-size: 15px;
 }
-
 .sidenav a:hover {
   color: #f1f1f1;
 }
-
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -345,7 +345,6 @@ ________________________________________________ */
   font-size: 36px;
   margin-left: 50px;
 }
-
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
@@ -400,6 +399,83 @@ animation: 20s slider infinite;
     70% { left: -200%; }
     75% { left: -300%; }
     95% { left: -300%; }
-    100% { left: -400%; }
-
+    100% { left: -400%; } 
+}
+/*______________________________________________
+                FOOTER
+________________________________________________ */
+.footer-container {
+  background-color: black;
+  padding-bottom: 4rem 0 4rem 0;
+  margin-top: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.footer {
+  width: 80%;
+  height: 35vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.footer-heading {
+  display: flex;
+  flex-direction: column;
+  margin-right: 3rem;
+  margin-top: 1rem;
+}
+.footer-heading h3 {
+  margin-bottom: 1rem;
+}
+.footer-heading a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+}
+.footer-heading a:hover {
+  color: red;
+  transition: 0.5s ease-out;
+}
+.footer-email-form h3 {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+#footer-email {
+  width: 250px;
+  height: 40px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  padding-left: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+#footer-email::placeholder {
+  color: #b1b1b1;
+}
+#footer-email-btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #f9423d;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+}
+#footer-email-btn:hover {
+  cursor: pointer;
+  color: #337af1;
+  transition: all 0.4s ease-out;
+}
+@media screen and (max-width: 1150px) {
+  .footer {
+    height: 50vh;
+  }
+  .footer-email-form {
+    margin-top: 2rem;
+  }
 }
